@@ -1177,9 +1177,9 @@ end)
 Section2:CreateToggle("Kill Cannoners", {Toggled=Settings.KillCannon,Description = false}, function(state)
     Settings.KillCannon = state
 end)
--- Section2:CreateToggle("Ignore Galleons", {Description = false}, function(state)
---     Settings.IgnoreGalleon = state
--- end)
+Section2:CreateToggle("Ignore Galleons", {Description = false}, function(state)
+    Settings.IgnoreGalleon = state
+end)
 Section2:CreateButton("Set Ship Spawn Location", function(args)
     Settings.ShipPos=game.Players.LocalPlayer.Character.HumanoidRootPart.Position--Vector3.new(6013.2841796875, -3.5988941192626953, -18909.974609375)--
     SpecterHub:AddNoti("Notification", "Set Ship Farm Position Complete", 5)
