@@ -851,7 +851,7 @@ local txt="Grand Piece Online"
 if identifyexecutor()=="Krnl" then 
     txt="Grand Piece Online (KRNL)"
 end
-local Window = SpecterHub:CreateWindow("<font color=\"#4FC3F7\">Specter Hub - By Nyaku</font>", txt, true)
+local Window = SpecterHub:CreateWindow("<font color=\"#7f4ff7\">Specter Hub - By Nyaku</font>", txt, true)
 
 --SpecterHub:AddNoti("Specter Hub Premium", "UI Loaded!", 6)
 function GetSword()
