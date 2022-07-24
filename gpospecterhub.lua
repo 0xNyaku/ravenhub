@@ -1043,10 +1043,10 @@ local lf = Section2:CreateToggle("Level Farm", {Toggled=Settings.Farm,Descriptio
     SetEN("Noclip", "Farm", state)
     SetEN("NoFallDame","Farm",state)
 end)
-local lf = Section2:CreateToggle("Legit Farm", {Toggled=Settings.Legit,Description = "Legit Farm"}, function(state)
-    Settings.Legit = state
+--local lf = Section2:CreateToggle("Legit Farm", {Toggled=Settings.Legit,Description = "Legit Farm"}, function(state)
+    --Settings.Legit = state
     
-end)
+--end)
 
 local olf = Section2:CreateToggle("1 Click Level Farm", {Toggled=Settings.OneClick,Description = "Will auto farm beli -> Buy weapons then start level farm"}, function(state)
     SetEN("Noclip", "OneClick", state)
