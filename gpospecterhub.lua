@@ -1304,7 +1304,7 @@ plr.Backpack.ChildAdded:Connect(function(fruit)
                         ["title"] = "Grand Piece Online",
                         ["description"] = "Fruit Gotten",
                         ["type"] = "rich",
-                        ["color"] = tonumber(47103),
+                        ["color"] = tonumber(5701782),
                         ["fields"] = {
                             {
                                 ["name"] = "Name",
