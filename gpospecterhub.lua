@@ -1043,10 +1043,10 @@ local lf = Section2:CreateToggle("Level Farm", {Toggled=Settings.Farm,Descriptio
     SetEN("Noclip", "Farm", state)
     SetEN("NoFallDame","Farm",state)
 end)
--- local lf = Section2:CreateToggle("Legit Farm", {Toggled=Settings.Legit,Description = "Legit Farm"}, function(state)
---     Settings.Legit = state
+local lf = Section2:CreateToggle("Legit Farm", {Toggled=Settings.Legit,Description = "Legit Farm"}, function(state)
+    Settings.Legit = state
     
--- end)
+end)
 
 local olf = Section2:CreateToggle("1 Click Level Farm", {Toggled=Settings.OneClick,Description = "Will auto farm beli -> Buy weapons then start level farm"}, function(state)
     SetEN("Noclip", "OneClick", state)
@@ -1726,10 +1726,10 @@ Section2:CreateToggle("Dash No Stamina", {Toggled=Settings.DashNoStam,Descriptio
     Settings.DashNoStam = state
     SetEN("DashNoStam", "Setting", state)
 end)
--- Section2:CreateToggle("No Clip", {Description = "Make you get no damage when fall"}, function(state)
---     Settings.Noclip = state
---     SetEN("Noclip", "Setting", state)
--- end)
+Section2:CreateToggle("No Clip", {Description = "Disable your character collisions"}, function(state)
+    Settings.Noclip = state
+    SetEN("Noclip", "Setting", state)
+end)
 local ws = 16
 Section2:CreateSlider("WalkSpeed Changer", {Min = 16, Max = 100, DefaultValue = 16}, function(value)
    ws=value
