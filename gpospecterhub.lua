@@ -846,12 +846,12 @@ end
 
 
 local SpecterHub = 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiet1308/tvkhub/main/rac"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0xNyaku/ravenhub/main/ravenhubui.lua"))()
 local txt="Grand Piece Online"
 if identifyexecutor()=="Krnl" then 
     txt="Grand Piece Online (KRNL)"
 end
-local Window = SpecterHub:CreateWindow("<font color=\"#4FC3F7\">Specter Hub - Nyaku</font>", txt, true)
+local Window = SpecterHub:CreateWindow("<font color=\"#4FC3F7\">Specter Hub - By Nyaku</font>", txt, true)
 
 --SpecterHub:AddNoti("Specter Hub Premium", "UI Loaded!", 6)
 function GetSword()
