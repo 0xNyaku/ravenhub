@@ -1,4 +1,3 @@
-
 repeat wait() until game.Players.LocalPlayer
 if not getgenv().tvk then getgenv().tvk={} end
 for k,v in pairs(getgenv().tvk) do v.On=false end
@@ -51,19 +50,19 @@ local SaveFileName = plr.Name.."_GPO.json"
 
 function SaveSettings()
     local HttpService = game:GetService("HttpService")
-    if not isfolder("CFA HUB") then
-        makefolder("CFA HUB")
+    if not isfolder("Raven HUB") then
+        makefolder("Raven HUB")
     end
-    writefile("CFA HUB/" .. SaveFileName, HttpService:JSONEncode(TableToSave(Settings)))
+    writefile("Raven HUB/" .. SaveFileName, HttpService:JSONEncode(TableToSave(Settings)))
 end
 
 function ReadSetting() 
     local s,e = pcall(function() 
         local HttpService = game:GetService("HttpService")
-        if not isfolder("CFA HUB") then
-            makefolder("CFA HUB")
+        if not isfolder("Raven HUB") then
+            makefolder("Raven HUB")
         end
-        return HttpService:JSONDecode(readfile("CFA HUB/" .. SaveFileName))
+        return HttpService:JSONDecode(readfile("Raven HUB/" .. SaveFileName))
     end)
     if s then return e 
     else
@@ -428,7 +427,7 @@ old = hookmetamethod(game, "__namecall", function(...)
         SetVaoDau(GetVauDau()+1)
         if Settings.RifleKick then
             if GetVaoDau()>480 then 
-                plr:Kick("\n[CFA Hub]\nKicked 499th rifle shoot (Rifle Kick)")
+                plr:Kick("\n[Raven Hub]\nKicked 499th rifle shoot (Rifle Kick)")
             end
         end
     end
@@ -846,15 +845,15 @@ function Tp(pos, checkfunc)
 end
 
 
-local CFAHub = 
+local RavenHub = 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiet1308/tvkhub/main/rac"))()
 local txt="Grand Piece Online"
 if identifyexecutor()=="Krnl" then 
     txt="Grand Piece Online (KRNL)"
 end
-local Window = CFAHub:CreateWindow("<font color=\"#4FC3F7\">CFA Hub</font>", txt, true)
+local Window = RavenHub:CreateWindow("<font color=\"#634ff7\">Raven Hub</font>", txt, true)
 
---CFAHub:AddNoti("CFA Hub Premium", "UI Loaded!", 6)
+--RavenHub:AddNoti("Raven Hub Premium", "UI Loaded!", 6)
 function GetSword()
     for k, v in pairs(plr.Character:GetChildren()) do
         if v:FindFirstChild("SwordEquip") then
@@ -1037,7 +1036,7 @@ local executor = identifyexecutor()
 
 if (executor == "Synapse X" or executor == "Krnl") and secure_call then
 else
-    CFAHub:AddNoti("Warning", "Your Exploit Is Not Supported, Our Script's might not working perfectly (Supported Exploit: KRNL,Synapse X)", 1)
+    RavenHub:AddNoti("Warning", "Your Exploit Is Not Supported, Our Script's might not working perfectly (Supported Exploit: KRNL,Synapse X)", 1)
 end
 local lf = Section2:CreateToggle("Level Farm", {Toggled=Settings.Farm,Description = "Will farm at Fishman Island (best way)"}, function(state)
     Settings.Farm = state
@@ -1183,7 +1182,7 @@ end)
 -- end)
 Section2:CreateButton("Set Ship Spawn Location", function(args)
     Settings.ShipPos=game.Players.LocalPlayer.Character.HumanoidRootPart.Position--Vector3.new(6013.2841796875, -3.5988941192626953, -18909.974609375)--
-    CFAHub:AddNoti("Notification", "Set Ship Farm Position Complete", 5)
+    RavenHub:AddNoti("Notification", "Set Ship Farm Position Complete", 5)
 end)
 function TpE(e,f)
     if e:FindFirstChild("HumanoidRootPart") then 
@@ -1320,7 +1319,7 @@ plr.Backpack.ChildAdded:Connect(function(fruit)
                         },
                         ["footer"] = {
                             ["icon_url"] = "https://cdn.discordapp.com/attachments/880433061307772958/994650337485000804/dc6e727bd4a71a981a037834b8c8fe38.png",
-                            ["text"] = "CFA Hub (" .. os.date("%X") .. ")"
+                            ["text"] = "Raven Hub (" .. os.date("%X") .. ")"
                         }
                     }}
                 }
@@ -1627,7 +1626,7 @@ function Detect()
 	return false
 end
 function SafeModeKick() 
-    plr:Kick("\n[CFA Hub]\nKicked for suspicious movements (Safe Mode)")
+    plr:Kick("\n[Raven Hub]\nKicked for suspicious movements (Safe Mode)")
 end
 plr.Character.ChildAdded:Connect(humadd)
 spawn(function() 
@@ -1698,7 +1697,7 @@ Section2:CreateToggle("Auto Kick", {Toggled=Settings.AutoKick,Description = "Aut
                     until tick() - CurrentTick >= Settings.AutoKickTimer * 60
                     or not Settings.AutoKick
                     if Settings.AutoKick then
-                        plr:Kick("\n[CFA Hub]\n".. Settings.AutoKickTimer .." minute reached (Auto Kick)")
+                        plr:Kick("\n[Raven Hub]\n".. Settings.AutoKickTimer .." minute reached (Auto Kick)")
                     end
                 end)
             end 
