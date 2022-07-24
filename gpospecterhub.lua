@@ -853,7 +853,7 @@ if identifyexecutor()=="Krnl" then
 end
 local Window = SpecterHub:CreateWindow("<font color=\"#7f4ff7\">Specter Hub - By Nyaku</font>", txt, true)
 
-SpecterHub:AddNoti("Specter Hub Premium", "UI Loaded!", 6)
+SpecterHub:AddNoti("Specter Hub Premium", "Authentication Success!", 10)
 function GetSword()
     for k, v in pairs(plr.Character:GetChildren()) do
         if v:FindFirstChild("SwordEquip") then
