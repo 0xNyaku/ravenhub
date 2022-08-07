@@ -1078,6 +1078,14 @@ local AFB= Section2:CreateToggle("Auto Farm Beli (For Begginer Only)", {Toggled=
     SetEN("NoFallDame","Chest",state)
 end)
 
+local AFB= Section2:CreateToggle("Auto Observation V2", {Description = "Do the Minigame for you"}, function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/QSr6iZJd", true))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/jden6Wqs", false))()
+    end
+end)
+
 spawn(function() 
     while wait() do 
         local mode
@@ -1731,7 +1739,7 @@ Section2:CreateToggle("No Clip", {Description = "Disable your character collisio
     SetEN("Noclip", "Setting", state)
 end)
 local ws = 16
-Section2:CreateSlider("WalkSpeed Changer", {Min = 16, Max = 200, DefaultValue = 16}, function(value)
+Section2:CreateSlider("WalkSpeed Changer", {Min = 16, Max = 100, DefaultValue = 16}, function(value)
    ws=value
 end)
 
@@ -1743,9 +1751,19 @@ spawn(function()
     end
 end)
 local Section2 = Tab2:CreateSection("ESP")
-Section2:CreateToggle("Island ESP", {Toggled=Settings.IslandE,Description = false}, function(state)
+Section2:CreateToggle("Island ESP", {Toggled=Settings.IslandE,Description = "Show all the islands in the map"}, function(state)
     Settings.IslandE=state
 end)
+
+local Section2 = Tab2:CreateSection("ESP")
+Section2:CreateToggle("Player ESP", {Description = "Show all players in the map"}, function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/tewgyzup", true))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/aa3UzTgK", false))()
+    end
+end)
+
 local Tab2 = Window:CreatePage("Web Hook")
 local Section2 = Tab2:CreateSection("Main")
 
