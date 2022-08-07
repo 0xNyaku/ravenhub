@@ -1731,7 +1731,7 @@ Section2:CreateToggle("No Clip", {Description = "Disable your character collisio
     SetEN("Noclip", "Setting", state)
 end)
 local ws = 16
-Section2:CreateSlider("WalkSpeed Changer", {Min = 16, Max = 100, DefaultValue = 16}, function(value)
+Section2:CreateSlider("WalkSpeed Changer", {Min = 16, Max = 200, DefaultValue = 16}, function(value)
    ws=value
 end)
 
