@@ -851,7 +851,7 @@ local txt="Grand Piece Online"
 if identifyexecutor()=="Krnl" then 
     txt="Grand Piece Online (KRNL)"
 end
-local Window = SpecterHub:CreateWindow("<font color=\"#7f4ff7\">Specter Hub - By Nyaku</font>", txt, true)
+local Window = SpecterHub:CreateWindow("<font color=\"#7f4ff7\">Specter Hub - By Nyaku - Second Sea</font>", txt, true)
 
 SpecterHub:AddNoti("Specter Hub Premium", "Authentication Success!", 10)
 function GetSword()
@@ -1030,7 +1030,6 @@ spawn(function()
 end)
 
 local Tab2 = Window:CreatePage("Farm")
-local Section2 = Tab2:CreateSection("Main Farm")
 
 local executor = identifyexecutor()
 
@@ -1546,9 +1545,6 @@ local Section2 = Tab2:CreateSection("Security")
 Section2:CreateToggle("Safe Mode", {Toggled=Settings.SafeMode,Description = "Will kick you if your character having suspicious movements"}, function(state)
     Settings.SafeMode = state
 end)
-Section2:CreateToggle("Auto Kick at 499 rifle shoot", {Toggled=Settings.RifleKick,Description = "Will kick you if you shooted more than 499 shoot"}, function(state)
-    Settings.RifleKick = state
-end)
 Section2:CreateToggle("Auto Kick", {Toggled=Settings.AutoKick,Description = "Auto kick you from the game after selected minute"}, function(state)
     Settings.AutoKick = state
 	spawn(function() 
@@ -1609,8 +1605,7 @@ local Section2 = Tab2:CreateSection("ESP")
 Section2:CreateToggle("Island ESP", {Toggled=Settings.IslandE,Description = "Show all the islands in the map"}, function(state)
     Settings.IslandE=state
 end)
-
-local Section2 = Tab2:CreateSection("ESP")
+	
 Section2:CreateToggle("Player ESP", {Description = "Show all players in the map"}, function(state)
     if state then
         loadstring(game:HttpGet("https://pastebin.com/raw/tewgyzup", true))()
@@ -1618,6 +1613,7 @@ Section2:CreateToggle("Player ESP", {Description = "Show all players in the map"
         loadstring(game:HttpGet("https://pastebin.com/raw/aa3UzTgK", false))()
     end
 end)
+
 
 local Tab2 = Window:CreatePage("Web Hook")
 local Section2 = Tab2:CreateSection("Main")
