@@ -14,7 +14,7 @@ for i,v in pairs(keys) do
     else
         if v == _G.Key then
             --Whitelisted!
-            print("Successfully whitelisted!")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/0xNyaku/ravenhub/main/specterhub.lua"))()
             keyCheck = _G.Key
             keys = ""
         else
