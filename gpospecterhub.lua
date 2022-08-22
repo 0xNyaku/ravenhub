@@ -50,19 +50,19 @@ local SaveFileName = plr.Name.."_GPO.json"
 
 function SaveSettings()
     local HttpService = game:GetService("HttpService")
-    if not isfolder("Specter HUB") then
-        makefolder("Specter HUB")
+    if not isfolder("KayZ Hub") then
+        makefolder("KayZ Hub")
     end
-    writefile("Specter HUB/" .. SaveFileName, HttpService:JSONEncode(TableToSave(Settings)))
+    writefile("KayZ Hub/" .. SaveFileName, HttpService:JSONEncode(TableToSave(Settings)))
 end
 
 function ReadSetting() 
     local s,e = pcall(function() 
         local HttpService = game:GetService("HttpService")
-        if not isfolder("Specter HUB") then
-            makefolder("Specter HUB")
+        if not isfolder("KayZ Hub") then
+            makefolder("KayZ Hub")
         end
-        return HttpService:JSONDecode(readfile("Specter HUB/" .. SaveFileName))
+        return HttpService:JSONDecode(readfile("KayZ Hub/" .. SaveFileName))
     end)
     if s then return e 
     else
@@ -427,7 +427,7 @@ old = hookmetamethod(game, "__namecall", function(...)
         SetVaoDau(GetVauDau()+1)
         if Settings.RifleKick then
             if GetVaoDau()>480 then 
-                plr:Kick("\n[Specter Hub]\nKicked 499th rifle shoot (Rifle Kick)")
+                plr:Kick("\n[KayZ Hub]\nKicked 499th rifle shoot (Rifle Kick)")
             end
         end
     end
@@ -851,9 +851,9 @@ local txt="Grand Piece Online"
 if identifyexecutor()=="Krnl" then 
     txt="Grand Piece Online (KRNL)"
 end
-local Window = SpecterHub:CreateWindow("<font color=\"#7f4ff7\">Specter Hub - By Nyaku</font>", txt, true)
+local Window = SpecterHub:CreateWindow("<font color=\"#7f4ff7\">KayZ Hub</font>", txt, true)
 
-SpecterHub:AddNoti("Specter Hub Premium", "Authentication Success!", 10)
+SpecterHub:AddNoti("KayZ Hub Premium", "Authentication Success!", 10)
 function GetSword()
     for k, v in pairs(plr.Character:GetChildren()) do
         if v:FindFirstChild("SwordEquip") then
@@ -1327,7 +1327,7 @@ plr.Backpack.ChildAdded:Connect(function(fruit)
                         },
                         ["footer"] = {
                             ["icon_url"] = "https://cdn.discordapp.com/attachments/598857864978890772/1000593055210012733/92031.png",
-                            ["text"] = "Specter Hub (" .. os.date("%X") .. ")"
+                            ["text"] = "KayZ Hub (" .. os.date("%X") .. ")"
                         }
                     }}
                 }
@@ -1634,7 +1634,7 @@ function Detect()
 	return false
 end
 function SafeModeKick() 
-    plr:Kick("\n[Specter Hub]\nKicked for suspicious movements (Safe Mode)")
+    plr:Kick("\n[KayZ Hub]\nKicked for suspicious movements (Safe Mode)")
 end
 plr.Character.ChildAdded:Connect(humadd)
 spawn(function() 
@@ -1705,7 +1705,7 @@ Section2:CreateToggle("Auto Kick", {Toggled=Settings.AutoKick,Description = "Aut
                     until tick() - CurrentTick >= Settings.AutoKickTimer * 60
                     or not Settings.AutoKick
                     if Settings.AutoKick then
-                        plr:Kick("\n[Specter Hub]\n".. Settings.AutoKickTimer .." minute reached (Auto Kick)")
+                        plr:Kick("\n[KayZ Hub]\n".. Settings.AutoKickTimer .." minute reached (Auto Kick)")
                     end
                 end)
             end 
