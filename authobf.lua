@@ -1,5 +1,3 @@
-_G.Key = "Key1"
-
 local keys = {
     "p2xsw0enbj", --Nyaku
     "k89lgg4oq5", --Kayz
